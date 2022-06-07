@@ -16,7 +16,7 @@ export default () => {
     })
   }
 
-  loadTexture(`https://patriboz.github.io/planets/assets/textures/aruba.png`).then(texture => {
+  loadTexture(`https://patriboz.github.io/planets/assets/textures/aruba.jpg`).then(texture => {
     const planet = new THREE.Mesh(
       new THREE.SphereBufferGeometry(1, 32, 32),
       new THREE.MeshBasicMaterial({map: texture})
