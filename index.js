@@ -25,7 +25,7 @@ export default () => {
   loadTexture(`https://solartextures.b-cdn.net/2k_mercury.jpg`).then(texture => {
     const planet = new THREE.Mesh(
       new THREE.SphereBufferGeometry(1, 32, 32),
-      new THREE.MeshBasicMaterial({texture})
+      new THREE.MeshBasicMaterial({map: texture})
     );
     
     planet.applyMatrix4(planetMatrix);
