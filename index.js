@@ -19,7 +19,7 @@ export default () => {
   const planetMatrix = new THREE.Matrix4().compose(
     new THREE.Vector3(100, 100, 100),
     new THREE.Quaternion(0, 0, 0, 1),
-    new THREE.Vector3(1, 1, 1)
+    new THREE.Vector3(10, 10, 10)
   );
 
   loadTexture(`https://solartextures.b-cdn.net/2k_mercury.jpg`).then(texture => {
