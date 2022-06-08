@@ -21,7 +21,7 @@ export default () => {
 
   loadTexture(`https://patriboz.github.io/planets/assets/textures/aruba.jpg`).then(texture => {
     planet = new THREE.Mesh(
-      new THREE.SphereBufferGeometry(1, 32, 32),
+      new THREE.SphereBufferGeometry(1, 64, 64),
       new THREE.MeshStandardMaterial({map: texture})
     );
     
