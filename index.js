@@ -1,6 +1,6 @@
 import * as THREE from 'three';
 import metaversefile from 'metaversefile';
-const {useApp} = metaversefile;
+const {useApp, useFrame} = metaversefile;
 
 const baseUrl = import.meta.url.replace(/(\/)[^\/\\]*$/, '$1');
 
