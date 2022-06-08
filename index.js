@@ -9,7 +9,7 @@ export default () => {
 
   app.name = 'Planet';
 
-  const planet = undefined;
+  let planet = undefined;
   const planetRotationPerFrame = new THREE.Quaternion(0.4207355, -0.2298488, 0.4207355, 0.7701512);
 
   const textureLoader = new THREE.TextureLoader();
