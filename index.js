@@ -31,7 +31,7 @@ export default () => {
 
   useFrame(({ timeDiff, timestamp }) => {
 
-    planet.applyQuaternion(planetRotationPerFrame);
+    planet.quaternion.premultiply(planetRotationPerFrame);
 
     planet.updateMatrixWorld();
     app.updateMatrixWorld();
