@@ -9,6 +9,8 @@ export default () => {
 
   app.name = 'Planet';
 
+  const planetRotationPerFrame = new THREE.Quaternion(0.4207355, -0.2298488, 0.4207355, 0.7701512);
+
   const textureLoader = new THREE.TextureLoader();
   const loadTexture = url => {
     return new Promise(resolve => {
@@ -23,6 +25,14 @@ export default () => {
     );
     
     app.add(planet);
+    planet.updateMatrixWorld();
+    app.updateMatrixWorld();
+  });
+
+  useFrame(({ timeDiff, timestamp }) => {
+
+    planet.applyQuaternion(planetRotationPerFrame);
+
     planet.updateMatrixWorld();
     app.updateMatrixWorld();
   });
