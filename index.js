@@ -10,7 +10,7 @@ export default () => {
   app.name = 'Planet';
 
   let planet = undefined;
-  const planetRotationPerFrame = new THREE.Quaternion(0.4207355, -0.2298488, 0.4207355, 0.7701512);
+  const planetRotationPerFrame = new THREE.Quaternion(0.0049999, -0.000025, 0.0049999, 0.999975);
 
   const textureLoader = new THREE.TextureLoader();
   const loadTexture = url => {
@@ -34,7 +34,6 @@ export default () => {
 
     if(typeof planet !== "undefined") {
       planet.quaternion.premultiply(planetRotationPerFrame);
-console.log(planet.quaternion);
       planet.updateMatrixWorld();
       app.updateMatrixWorld();
     }
