@@ -32,10 +32,13 @@ export default () => {
 
   useFrame(({ timeDiff, timestamp }) => {
 
-    planet.quaternion.premultiply(planetRotationPerFrame);
+    if(planet) {
+      planet.quaternion.premultiply(planetRotationPerFrame);
 console.log(planet.quaternion);
-    planet.updateMatrixWorld();
-    app.updateMatrixWorld();
+      planet.updateMatrixWorld();
+      app.updateMatrixWorld();
+    }
+    
   });
   
   return app;
