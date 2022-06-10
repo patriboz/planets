@@ -1,13 +1,16 @@
 import * as THREE from 'three';
 import metaversefile from 'metaversefile';
-const {useApp, useFrame} = metaversefile;
+const {useApp, useInternals, useFrame} = metaversefile;
 
 const baseUrl = import.meta.url.replace(/(\/)[^\/\\]*$/, '$1');
 
 export default () => {
   const app = useApp();
-
+  const {renderer, camera} = useInternals();
+  const localPlayer = metaversefile.useLocalPlayer();
   app.name = 'Planet';
+
+  console.log(camera, localPlayer);
 
   let planet = undefined;
   const planetRotationPerFrame = new THREE.Quaternion(0.00005, 0, 0.00005, 1);
